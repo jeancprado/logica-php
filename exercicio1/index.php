@@ -7,23 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <div class="bg-black">
-     <div class="container">
-    <h5>Exercício 01<h5>
-    <br>
-    <form action="index.php" method="post">
-        <div>
-        <label for="first number">Digite o primeiro número</label>
-        <input type="text" name="first number">
+    <div class="bg-black">
+        <div class="container">
+            <h5>Exercício 01</h5>
+                <form action="index.php" method="post"> </form>
+                    <label for="first-number">Digite o primeiro número</label>
+                    <input type="text" name="first-number"><br>
+                    <label for="second-number">Digite o segundo número</label>
+                    <input type="text" name="second-number"><br>
+                    <input type="submit" value="enviar">
+                </form>
         </div>
-        <br>
-        <div>
-        <label for="second number">Digite o segundo número</label>
-        <input type="text" name="second number">
-        </div>
-        <br>    
-        <input type="submit" value="enviar">
-    </form>
-
+    </div>
 </body>
 </html>
