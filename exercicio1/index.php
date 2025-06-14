@@ -13,17 +13,31 @@
     <br>
     <form action="index.php" method="post">
         <div>
-        <label for="first number">Digite o primeiro número</label>
-        <input type="text" name="first number">
+        <label for="value1">Digite o primeiro número</label>
+        <input type="text" name="value1">
         </div>
         <br>
         <div>
-        <label for="second number">Digite o segundo número</label>
-        <input type="text" name="second number">
+        <label for="value2">Digite o segundo número</label>
+        <input type="text" name="value2">
         </div>
         <br>    
         <input type="submit" value="enviar">
     </form>
 
+    <?php
+        $value1 = $_POST['value1'];
+        $value2 = $_POST['value2'];
+
+        $total = $value1 + $value2;
+
+        if ($total > 20) {
+            $total = $total + 8;
+        }
+        else {
+            $total = $total - 5;
+        }
+        echo "<div class='result'>0 resultado foi: $total</div>"
+    ?>
 </body>
 </html>
