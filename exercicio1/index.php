@@ -17,6 +17,20 @@
                 <input type="text" name="second-number"><br>
                 <input type="submit" value="enviar">
             </form>
+	    <?php
+		$value1 = $_POST['value1'];
+		$value2 = $_POST['value2'];
+
+		$total = $value1 + $value2;
+
+		if ($total > 20) {
+		    $total = $total + 8;
+		}
+		else {
+		    $total = $total - 5;
+		}
+        	echo "<div class='result'>0 resultado foi: $total</div>"
+    	    ?>
         </div>
     </div>
 </body>
