@@ -7,23 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <div class="bg-black">
-     <div class="container">
-    <h5>Exercício 01<h5>
-    <br>
-    <form action="index.php" method="post">
-        <div>
-        <label for="value1">Digite o primeiro número</label>
-        <input type="text" name="value1">
+    <div class="bg-black">
+        <div class="container">
+            <h5>Exercício 01<h5> <br>
+            <form action="index.php" method="post">
+            <label for="value1">Digite o primeiro número</label>
+            <input type="text" name="value1"> <br>
+            <label for="value2">Digite o segundo número</label>
+            <input type="text" name="value2"> <br>
+            <input type="submit" value="enviar">
+            </form>
         </div>
-        <br>
-        <div>
-        <label for="value2">Digite o segundo número</label>
-        <input type="text" name="value2">
-        </div>
-        <br>    
-        <input type="submit" value="enviar">
-    </form>
+    </div>
 
     <?php
         $value1 = $_POST['value1'];
