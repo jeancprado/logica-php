@@ -5,7 +5,6 @@ Aulas em lógica php pelo projeto novos titans
 
 **Requisitos**
 
-- PHP 8 ou superior
 - Docker 
 
 Passo a passo
