@@ -16,7 +16,7 @@ body {
 }
 
 input[type="text"] {
-width: 490px;
+    width: 490px;
 }
 
 input[type="submit"] {
