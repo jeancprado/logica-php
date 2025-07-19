@@ -11,14 +11,16 @@
     <h4>Exercício III</h4>
     <form action="index.php" method="post">
         <div>
-            <label for="name">nome</label>
-            <input type="text" name="nome">
+            <label for="text">nome</label>
+            <input type="text" name="text">
 
-            <label for="age">idade</label>
-            <input type="number" name="idade">
+            <label for="number">idade</label>
+            <input type="text" name="number">
 
-            <label for="exeperience">Tempo de experiência profissional (em anos)</label>
-            <input type="number" name="experiencia">
+            <label for="number">tempo de experiência profissional (em anos)</label>
+            <input type="text" name="number">
+
+            <input type="submit" value="enviar">
         </div>
     </form>
 </body>
