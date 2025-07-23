@@ -1,0 +1,25 @@
+body {
+    background-color: rgba(139, 229, 232, 0.459);
+    color: white;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    width: 550px;
+    background-color: #0c0d138c;
+    padding: 15px;
+}
+
+input[type="text"] {
+    width: 490px;
+}
+
+input[type="submit"] {
+    width: 500px;
+    margin-bottom: 20px;
+}
