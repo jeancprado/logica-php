@@ -18,7 +18,7 @@ form {
   background: rgba(218, 165, 32, 0.205);
   padding: 30px;
   border-radius: 40px;
-  width: 300px;
+  width: 400px;
 }
 
 label {
@@ -36,6 +36,6 @@ input {
 }
 
 input[type="submit"] {
-    width: 105%;
+    width: 415px;
     padding: 7px;
 }
