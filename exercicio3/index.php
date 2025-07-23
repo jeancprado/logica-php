@@ -11,17 +11,32 @@
     <h4>Exercício III</h4>
     <form action="index.php" method="post">
         <div>
-            <label for="text">nome</label>
-            <input type="text" name="text">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
 
-            <label for="number">idade</label>
-            <input type="text" name="number">
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" required>
 
-            <label for="number">tempo de experiência profissional (em anos)</label>
-            <input type="text" name="number">
+        <label for="experiencia">Experiência (anos):</label>
+        <input type="number" id="experiencia" name="experiencia" required>
 
-            <input type="submit" value="enviar">
-        </div>
+        <input type="submit" value="Verificar">
     </form>
+
+    <?php
+    
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $nome = $_POST["nome"];
+            $idade = $_POST["idade"];
+            $experiencia = $_POST["experiencia"];
+
+            if ($idade >= 18 && $experiencia >= 2) 
+            echo "$nome - VOCÊ FOI QUALIFICADO PARA A VAGA!";
+        
+            else 
+            echo "$nome - VOCÊ NÃO FOI QUALIFICADO PARA A VAGA";
+    }
+    ?>
+
 </body>
 </html>
