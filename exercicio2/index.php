@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 2</title>
-    <link rel="stylesheet" href="exercicio2.style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -21,22 +21,26 @@
         
 <?php
 
-$number = $_POST["number"]; 
+if (isset($_POST["number"])){
+    
+    $number = $_POST["number"]; 
 
-if ($number % 3 == 0) {
-    echo "O número $number é divisível por 3.";
-}
+    if ($number % 3 == 0) {
+        echo "O número $number é divisível por 3.<br>";
+    }
 
-elseif ($number % 4 == 0) {
-    echo "O número $number é divisível por 4.";
-} 
+    if ($number % 4 == 0) {
+        echo "O número $number é divisível por 4.<br>";
+    } 
 
-elseif ($number % 6 == 0) {
-    echo "O número $number é divisível por 6.";
-}
+    if ($number % 6 == 0) {
+        echo "O número $number é divisível por 6.<br>";
+    }
 
-else {
-    echo "O número $number não é divisível por 3, 4 ou 6.";
+    if ($number % 3 != 0 && $number % 4 != 0 && $number % 6 != 0) {
+        echo "O número $number não é divisível por 3, 4 ou 6.";
+    }
+
 }
 
 ?>
