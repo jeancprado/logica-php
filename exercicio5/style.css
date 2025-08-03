@@ -44,5 +44,6 @@ button {
 
 button:hover {
     background-color: rgba(237, 159, 123, 1);
+    width: 200px;
     transition: 0.2s;
 }
