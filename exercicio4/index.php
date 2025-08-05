@@ -43,11 +43,14 @@
 
         if ($media < 5) { 
             $cor = "red";
-            } else {
+            } 
+
+            else {
             $cor = "green";
-        }
+            }
 
         echo "<p> Média das notas: " . "<span style=\"color: $cor;\">" . number_format($media, 2, ',', '.') . "</span>" . "</p>";;
+        
         }
         
         ?>
