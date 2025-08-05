@@ -42,18 +42,17 @@
         echo "<p> Notas em ordem crescente: " . $notas[0] . ", " . $notas[1] . ", " . $notas[2] . "</p>";
 
         if ($media < 5) { 
-            $cor = "red";
-            } 
+        $cor = "red";
+        } 
 
-            else {
-            $cor = "green";
-            }
+        else {
+        $cor = "green";
+        }
 
-        echo "<p> Média das notas: " . "<span style=\"color: $cor;\">" . number_format($media, 2, ',', '.') . "</span>" . "</p>";;
-        
+        echo "<p> Média das notas: " . "<span style=\"color: $cor;\">" . number_format($media, 2, ',', '.') . "</span>" . "</p>";
         }
         
         ?>
-  </div>
+    </div>
 </body>
 </html>
