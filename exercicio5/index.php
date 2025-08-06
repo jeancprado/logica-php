@@ -11,20 +11,20 @@
     <div class="container">
 
         <h3>Qual é o formato do parelelepídedo?</h3> 
-        <p>insira as medidas abaixo para verificar</p> <br>
+        <p>insira as medidas abaixo para verificar</p>
 
         <form action="index.php" method="post">
 
             <label for="comprimento">Comprimento:</label>
-            <input type="number" name="comprimento"> <br><br>
+            <input type="number" name="comprimento"> 
 
             <label for="largura">Largura:</label>
-            <input type="number" name="largura"> <br><br>
+            <input type="number" name="largura">
 
             <label for="altura">Altura:</label>
-            <input type="number" name="altura"> <br><br>
+            <input type="number" name="altura">
 
-            <button type="submit">Enviar</button> <br><br>
+            <button type="submit">Enviar</button>
 
         </form>
 
