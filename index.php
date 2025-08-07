@@ -13,5 +13,10 @@
     <a href="exercicio3/">Acesse o exercício 3</a>
     <a href="exercicio4/">Acesse o exercício 4</a>
     <a href="exercicio5/">Acesse o exercício 5</a>
+    <a href="exercicio6/">Acesse o exercício 6</a>
+    <a href="exercicio7/">Acesse o exercício 7</a>
+    <a href="exercicio8/">Acesse o exercício 8</a>
+    <a href="exercicio9/">Acesse o exercício 9</a>
+    <a href="exercicio10/">Acesse o exercício 10</a>
 </body>
 </html>
