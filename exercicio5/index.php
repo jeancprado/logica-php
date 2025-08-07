@@ -38,9 +38,9 @@
 
         if ($comprimento == $largura && $largura == $altura) {
                 echo $resultado = "Cubo";
-        } elseif ($comprimento == $largura || $comprimento == $altura || $largura == $altura) {
+        }   elseif ($comprimento == $largura || $comprimento == $altura || $largura == $altura) {
                 echo  $resultado = "Paralelepípedo Retangular";
-        } else {
+        }   else {
                 echo $resultado = "Paralelepípedo Oblíquo";
         }
     }
