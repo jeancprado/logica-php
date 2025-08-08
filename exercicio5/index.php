@@ -37,11 +37,11 @@
         $altura = $_POST['altura'];
 
         if ($comprimento == $largura && $largura == $altura) {
-                echo $resultado = "Cubo";
+            echo $resultado = "Cubo";
         }   elseif ($comprimento == $largura || $comprimento == $altura || $largura == $altura) {
-                echo  $resultado = "Paralelepípedo Retangular";
+            echo  $resultado = "Paralelepípedo Retangular";
         }   else {
-                echo $resultado = "Paralelepípedo Oblíquo";
+            echo $resultado = "Paralelepípedo Oblíquo";
         }
     }
 ?>
