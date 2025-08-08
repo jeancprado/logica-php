@@ -26,8 +26,7 @@
 
         </form>
 
-        <?php
-        
+<?php    
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         $nota1 = ($_POST["nota1"]);
@@ -42,17 +41,15 @@
         echo "<p> Notas em ordem crescente: " . $notas[0] . ", " . $notas[1] . ", " . $notas[2] . "</p>";
 
         if ($media < 5) { 
-        $cor = "red";
+            $cor = "red";
         } 
-
         else {
-        $cor = "green";
+            $cor = "green";
         }
 
         echo "<p> Média das notas: " . "<span style=\"color: $cor;\">" . number_format($media, 2, ',', '.') . "</span>" . "</p>";
-        }
-        
-        ?>
+    }
+?>
     </div>
 </body>
 </html>
