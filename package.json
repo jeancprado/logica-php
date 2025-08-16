@@ -1,0 +1,15 @@
+{
+  "name": "novostitans",
+  "version": "1.0.0",
+  "description": "Aulas em lógica php pelo projeto novos titans",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^14.5.4"
+  }
+}
