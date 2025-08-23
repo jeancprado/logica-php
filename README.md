@@ -42,16 +42,9 @@ npm -v
 
 **Instalação do (Cypress)**
 
-Em seu terminal, rode estes comandos:
-
-- ​Instalar cypress: npm install cypress --save-dev
+- ​Instalar cypress: npm install cypress
 
 -​ Abrir a interface do cypress: npx cypress open
- 
- Ao abrir a interface(janela) do Cypress, siga esses passos:
-Passo 1: Selecione o tipo de teste (E2E):
-
-Passo 2: Vá para a parte inferior da tela e clique em Continuar/Continue
 
 Passo 3: Escolha um navegador (de sua preferência) e clique em “start E2E Testing
 in [...]”
