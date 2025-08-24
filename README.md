@@ -42,11 +42,11 @@ npm -v
 
 **Instalação do (Cypress)**
 
-- ​Instalar cypress: npm install cypress
+Passo 1: ​Instalar cypress: npm install 
 
--​ Abrir a interface do cypress: npx cypress open
+Passo 2:​ Abrir a interface do cypress: npx cypress open
 
 Passo 3: Escolha um navegador (de sua preferência) e clique em “start E2E Testing
 in [...]”
 
-Passo 4: Selecione o exercício que deseja testar
+Passo 4: Selecione o exercício que deseja testar.
