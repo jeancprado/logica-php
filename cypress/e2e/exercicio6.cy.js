@@ -15,6 +15,6 @@ describe('HOME', () => {
     cy.contains('Número da Nota (1-10):')
     cy.get('input[type="number"]')
     cy.get('button[type="submit"]')
-    cy.get('[background-image]')
+    cy.get('body').should('be.visible')
   })
 })

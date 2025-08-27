@@ -5,39 +5,14 @@
 - Docker (para o funcionamento das aplicações)
 - Cypress e Node.js (para teste automatizado)
 
+
 **Passo a passo (docker)**
 
 - Com o projeto clonado
-- Inicie o comando docker-compose up no seu terminal
+- Inicie o comando: docker-compose up 
 - Acesse no seu navegador a url: localhost
 - Selecione o exercicio que deseja visulizar.
-
-
-**Instalação do (Node.js)**
-
-Em seu terminal:
-Passo 1.​ Atualize o sistema (opcional porém recomendado):
-sudo apt update && sudo apt upgrade -y
-
-Passo 2.​ Instale o “curl”, se não tiver:
-sudo apt install curl -y
-
-Passo 3.​ Baixar e instalar a nvm:
-curl -o-
-https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh |
-bash
-
-Passo 4.​ Em vez de reiniciar a concha ou shell:
-\. "$HOME/.nvm/nvm.sh"
-
-Passo 5.​ Baixar e instalar a Node.js:
-nvm install 24
-
-Passo 6.​ Consultar a versão da Node.js:
-node -v
-
-Passo 7.​ Consultar a versão da npm:
-npm -v
+- Obs: Verifique se sua porta padrão (localhost) não está ocupada por outro programa, caso estiver suspenda para que o docker funcione.
 
 
 **Instalação do (Cypress)**
