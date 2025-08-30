@@ -18,10 +18,12 @@
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $numero = $_POST["numero"];
+    $numero = $_POST["numero"];
+        
     if (is_numeric($numero)) {
         $numero = (int)$numero;
         $nota = "";
+
         switch ($numero) {
             case 1:
                 $nota = "Dó";
@@ -56,13 +58,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             default:
                 $nota = "Número inválido. Insira um número entre 1 e 10.";
         }
-            if ($nota) {
-                echo "<p class='resultado'>A nota musical correspondente é: " . $nota . "</p>";
-            } else {
-                echo "<p class='resultado'>" . $nota . "</p>";
-            }
+        
+        if ($nota) {
+            echo "<p class='resultado'>A nota musical correspondente é: " . $nota . "</p>";
         } else {
-            echo "<p class='resultado'>Por favor, insira um número válido.</p>";
+            echo "<p class='resultado'>" . $nota . "</p>";
+        }
+        
+    } else {
+        echo "<p class='resultado'>Por favor, insira um número válido.</p>";
     }
 }
 ?>
