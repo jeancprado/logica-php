@@ -15,5 +15,6 @@ describe('HOME', () => {
     cy.contains('Número da Nota (de: 1 a 10):')
     cy.get('input[type="number"]')
     cy.get('button[type="submit"]')
+    cy.get('body')
   })
 })
