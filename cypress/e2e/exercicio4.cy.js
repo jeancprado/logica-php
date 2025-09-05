@@ -1,10 +1,5 @@
 describe('Exercício 4', () => {
 
-  it('pagina do exercício 4', () => {
-    cy.visit('/')
-    cy.get('a[href="exercicio4/"]').click()
-  })
-
  it('Deve exibir o título da página, inputs e botão de enviar', () => {
     cy.visit('/')
     cy.get('a[href="exercicio4/"]').click()
