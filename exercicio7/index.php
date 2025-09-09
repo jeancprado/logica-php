@@ -20,5 +20,29 @@
 
             <button type="submit" name="gerar">Gerar Recibo</button>
         </form>
+
+<?php
+    
+    if (isset($_POST['gerar'])) {
+        $equipamento = $_POST['equipamento'];
+        $tipo_cliente = $_POST['tipo_cliente'];
+        $dias = 0;
+
+        switch ($tipo_cliente) {
+            case "VIP":
+                $dias = 7;
+                break;
+            case "Comum":
+                $dias = 2;
+                break;
+        }
+
+        echo "<h3>Recibo de Aluguel</h3>";
+        echo "<p><strong>Equipamento:</strong> $equipamento</p>";
+        echo "<p><strong>Cliente:</strong> $tipo_cliente</p>";
+        echo "<p><strong>Prazo para devolução:</strong> $dias dias</p>";
+    }
+?>
+
 </body>
 </html>
