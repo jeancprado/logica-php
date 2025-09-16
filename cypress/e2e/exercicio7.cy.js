@@ -1,7 +1,6 @@
 describe('Exercício 7', () => {
   
   it('Deve gerar recibo correto para cliente VIP', () => {
-    cy.visit('localhost')
     cy.visit('localhost/exercicio7/')
     cy.get('input[name="equipamento"]').type('Raquete de Tênis')
     cy.get('input[name="tipo_cliente"][value="VIP"]').check()
@@ -13,6 +12,7 @@ describe('Exercício 7', () => {
   })
 
   it('Deve gerar recibo correto para cliente Comum', () => {
+    cy.visit('localhost/exercicio7/')
     cy.get('input[name="equipamento"]').type('Bola de Futebol')
     cy.get('input[name="tipo_cliente"][value="Comum"]').check()
     cy.get('button[type="submit"]').click()
