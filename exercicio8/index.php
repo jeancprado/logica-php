@@ -10,8 +10,8 @@
     <div class="container">
         <h1>Contador e Soma</h1>
         <form method="post">
-        <input type="number" name="limite" placeholder="Número limite" required>
-        <button type="submit">Calcular Soma</button>
+            <input type="number" name="limite" placeholder="Número limite" required>
+            <button type="submit">Calcular Soma</button>
         </form>
     </div>
 </body>
