@@ -55,3 +55,16 @@ button {
 button:hover {
   background: #3cc1a3;
 }
+<<<<<<< HEAD
+=======
+
+.resultado {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.sequencia {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+>>>>>>> d516416 ([nvt-87] exercício 8 backend)
