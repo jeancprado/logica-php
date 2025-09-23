@@ -15,21 +15,21 @@
         </form>
 
         <?php
-        if ($_SERVER["REQUEST_METHOD"] === "POST") {
-            $limite = intval($_POST["limite"]);
-            $soma = 0;
-            $sequencia = [];
-
-            for ($i = 1; $i <= $limite; $i++) {
-                $sequencia[] = $i;
-                $soma += $i;
+            if ($_SERVER["REQUEST_METHOD"] === "POST") {
+                $limite = intval($_POST["limite"]);
+                $soma = 0;
+                $sequencia = [];
+            
+                for ($i = 1; $i <= $limite; $i++) {
+                    $sequencia[] = $i;
+                    $soma += $i;
+                }
+            
+                echo "<div class='resultado'>";
+                echo "<p class='sequencia'><strong>Sequência:</strong> " . implode(", ", $sequencia) . "</p>";
+                echo "<p><strong>Soma total:</strong> $soma</p>";
+                echo "</div>";
             }
-
-            echo "<div class='resultado'>";
-            echo "<p class='sequencia'><strong>Sequência:</strong> " . implode(", ", $sequencia) . "</p>";
-            echo "<p><strong>Soma total:</strong> $soma</p>";
-            echo "</div>";
-        }
         ?>
         
     </div>
