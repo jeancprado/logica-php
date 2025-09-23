@@ -1,4 +1,5 @@
 describe('HOME', () => {
+  
   it('Visita a página do exercício', () => {
     cy.visit('/exercicio6')
   })
