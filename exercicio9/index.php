@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +14,18 @@
             <input type="number" name="vezes" placeholder="Número de repetições" required>
             <button type="submit">Repetir Palavra</button>
         </form>
+        <div class="resultado">
+        <?php
+            if ($_SERVER["REQUEST_METHOD"] === "POST") {
+                $palavra = htmlspecialchars($_POST["palavra"]);
+                $vezes = intval($_POST["vezes"]);
+
+                for ($i = 1; $i <= $vezes; $i++) {
+                    echo "<p>$i - $palavra</p>";
+                }
+            }
+        ?>
+        </div>
     </div>
 </body>
 </html>

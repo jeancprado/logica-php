@@ -3,30 +3,35 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Trebuchet MS', sans-serif;
-    background: linear-gradient(135deg, #f1b088, #90eafa);
+    background: linear-gradient(135deg, #ff8c42, #2ec4b6);
     color: #fff;
 }
+
 .container {
     background: rgba(0,0,0,0.4);
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.336);
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
     width: 80%;
-    max-width: 600px;
+    max-width: 700px;
     text-align: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 h1 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
     font-weight: bold;
     text-shadow: 2px 2px #000;
 }
+
 form {
     margin-bottom: 30px;
 }
@@ -49,13 +54,41 @@ button {
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    background: #ff8a42c2;
+    background: #ff8c42;
     color: #fff;
     font-weight: bold;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, background 0.3s ease;
 }
 
 button:hover {
     transform: scale(1.1);
-    background: #ff6a00f3;
+    background: #ff6a00;
+}
+
+.resultado {
+    margin-top: 20px;
+    text-align: left;
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 12px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.resultado p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-style: italic;
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideIn {
+    from {opacity: 0; transform: translateX(-30px);}
+    to {opacity: 1; transform: translateX(0);}
 }
