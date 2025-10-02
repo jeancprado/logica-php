@@ -57,5 +57,5 @@ button {
 
 button:hover {
     transform: scale(1.1);
-    background: #ff6a00;
+    background: #ff6a00f3;
 }
