@@ -1,10 +1,26 @@
 services:
-  php-apache:
-    image: php:8.4-apache
-    container_name: php-apache
-    volumes: 
-      - ./:/var/www/html
-    ports:
-      - "80:80"
+  db:
+    image: mysql:8.0
+    container_name: mysql_dados
     environment:
-      - APACHE_DOCUMENT_ROOT=/var/www/html
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: exercicio_dados
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin  
+    environment:
+      PMA_HOST: db
+      PMA_USER: user
+      PMA_PASSWORD: password
+    ports:
+      - "8080:80"
+
+volumes:
+  db-data:
