@@ -3,7 +3,6 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
        $print = notaMusical($_POST["numero"]);
     }
-$print7 = notaMusical(7);
 ?>
 
 <!DOCTYPE html>
@@ -26,10 +25,6 @@ $print7 = notaMusical(7);
     
         <div class="resultado">
             <?= isset($print) ? $print : '' ?>
-        </div>
-
-        <div class="resultado">
-            <?= $print7 ?>
         </div>
     
     </div>
