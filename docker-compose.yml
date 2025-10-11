@@ -1,4 +1,11 @@
 services:
+
+  php-apache:
+  image: php:8.4-apache
+  container_name: php-apache
+  volumes:
+  - ./:/var/www/html
+
   db:
     image: mysql:8.0
     container_name: mysql_dados
