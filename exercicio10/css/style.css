@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+ 
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #74ebd58c, #acb6e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+ 
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    text-align: center;
+ }
+ 
+h2 {
+    font-size: 1rem;
+    color: #023e8a;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+ 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+ 
+label {
+    font-weight: bold;
+    color: #333;
+}
+ 
+input[type="date"],input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+input[type="date"]:focus, input[type="number"]:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 8px rgba(0, 119, 182, 0.3);
+    outline: none;
+}
+ 
+button {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+ 
+button:hover {
+    background-color: #023e8a;
+    transform: scale(1.05);
+}
+ 
+.mensagem {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: opacity 0.5s ease;
+}
+ 
+.sucesso {
+    color: green;
+}
+ 
+.erro {
+    color: red;
+}
+ 
