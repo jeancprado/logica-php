@@ -11,7 +11,20 @@
 - Inicie o comando docker-compose up no seu terminal
 - Acesse no seu navegador a url: localhost
 - Selecione o exercicio que deseja visulizar.
-- (Banco de dados MySQL) acesso na porta: localhost:8080
+- PhpMyAdmin(Banco de dados MySQL) acesso na porta: localhost:8080
+
+**Informações do banco de dados**
+
+- Nome do banco: exercicio_dados
+- Usuário: user
+- Senha: password
+- Volume persistente: db-data
+
+**Passo a Passo uso (banco de dados)**
+
+- Acesse o phpmyadmim, clique em (exercicio_dados), na barra superior procure por import/importar, em browse, busque pela pasta do exercício que deseja testar, na pasta (db) selecione o arquivo base.sql
+- ou
+- Tambem disponível no link: http://localhost:8080/index.php?route=/database/structure&db=exercicio_dados
 
 
 **Instalação do (Cypress)**
