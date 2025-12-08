@@ -24,7 +24,7 @@
 
 - Acesse o phpmyadmim, clique em (exercicio_dados), na barra superior procure por import/importar, em browse, busque pela pasta do exercício que deseja testar, na pasta (db) selecione o arquivo base.sql
 - ou
-- Tambem disponível no link: http://localhost:8080/index.php?route=/database/structure&db=exercicio_dados
+- Acesse este link: http://localhost:8080 e importe o arquivo desejado
 
 
 **Instalação do (Cypress)**
