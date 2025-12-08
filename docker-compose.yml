@@ -1,13 +1,12 @@
 services:
   php-apache:
-    image: php:8.4-apache
-    container_name: php-apache
-    volumes: 
-      - ./:/var/www/html
+    build: 
+      dockerfile: Dockerfile
+      context: ./
     ports:
       - "80:80"
-    environment:
-      - APACHE_DOCUMENT_ROOT=/var/www/html
+    volumes: 
+      - ./:/var/www/html
 
   db:
     image: mysql:8.0
