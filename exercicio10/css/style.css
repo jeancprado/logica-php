@@ -1,93 +1,158 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
- 
 body {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #74ebd58c, #acb6e5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
     padding: 30px;
-}
- 
-.container {
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    width: 100%;
-    max-width: 600px;
-    padding: 40px;
-    text-align: center;
- }
- 
-h2 {
-    font-size: 1rem;
-    color: #023e8a;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
- 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-}
- 
-label {
-    font-weight: bold;
+    background-color: #f8faff; 
     color: #333;
 }
- 
-input[type="date"],input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    text-align: center;
-    transition: all 0.3s ease;
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-input[type="date"]:focus, input[type="number"]:focus {
-    border-color: #0077b6;
-    box-shadow: 0 0 8px rgba(0, 119, 182, 0.3);
-    outline: none;
+.secao {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
 }
- 
-button {
-    background-color: #0077b6;
+
+h2 {
+    color: #007bff;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+
+}
+
+.secao-registro label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #495057;
+}
+
+.secao-registro input[type="date"],
+.secao-registro input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 6px; 
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.secao-registro button {
+    width: 100%;
+    background-color: #007bff;
     color: white;
+    padding: 12px 15px;
     border: none;
-    padding: 10px 30px;
-    border-radius: 10px;
-    font-size: 1rem;
+    border-radius: 6px;
     cursor: pointer;
-    transition: 0.3s ease;
+    font-size: 17px;
+    margin-top: 25px;
+    transition: background-color 0.3s;
 }
- 
-button:hover {
-    background-color: #023e8a;
-    transform: scale(1.05);
+
+.secao-registro button:hover {
+    background-color: #0056b3;
 }
- 
-.mensagem {
-    margin-top: 20px;
+
+.feedback {
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
     font-weight: bold;
-    font-size: 1.1rem;
-    transition: opacity 0.5s ease;
+    border: 1px solid;
+    font-size: 0.95em;
 }
- 
-.sucesso {
-    color: green;
+
+.feedback.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
 }
- 
-.erro {
-    color: red;
+
+.feedback.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
 }
- 
+
+
+.resumo-estatistico {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #f7f7f7;
+    border: 1px solid #e9ecef;
+}
+
+.resumo-estatistico h3 {
+    color: #343a40;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.estatistica-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px dotted #e0e0e0;
+}
+
+.estatistica-valor {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.estatistica-media .estatistica-valor {
+    font-size: 1.3em;
+    color: #007bff;
+}
+
+.tabela-registros {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabela-registros th, .tabela-registros td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: left;
+}
+
+.tabela-registros th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.tabela-registros tr.baixa { background-color: #e3f2fd; } 
+.tabela-registros tr.normal { background-color: #e8f5e9; }
+.tabela-registros tr.alta { background-color: #fbe9e7; }
+
+.classificacao-col {
+    font-weight: 600;
+    text-align: center;
+}
+
+.no-records {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    border-radius: 4px;
+    margin-top: 15px;
+}
