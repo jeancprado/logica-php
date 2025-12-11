@@ -18,5 +18,16 @@
     <a href="exercicio8/">Acesse o exercício 8</a>
     <a href="exercicio9/">Acesse o exercício 9</a>
     <a href="exercicio10/">Acesse o exercício 10</a>
+    <a href="exercicio11/">Acesse o exercício 11</a>
+    <a href="exercicio12/">Acesse o exercício 12</a>
+    <a href="exercicio13/">Acesse o exercício 13</a>
+    <a href="exercicio14/">Acesse o exercício 14</a>
+    <a href="exercicio15/">Acesse o exercício 15</a>
+    <a href="exercicio16/">Acesse o exercício 16</a>
+    <a href="exercicio17/">Acesse o exercício 17</a>
+    <a href="exercicio18/">Acesse o exercício 18</a>
+    <a href="exercicio19/">Acesse o exercício 19</a>
+    <a href="exercicio20/">Acesse o exercício 20</a>
+
 </body>
 </html>
