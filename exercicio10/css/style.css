@@ -138,9 +138,9 @@ h2 {
     font-size: 0.9em;
 }
 
-.tabela-registros tr.baixa { background-color: #e3f2fd; } 
-.tabela-registros tr.normal { background-color: #e8f5e9; }
-.tabela-registros tr.alta { background-color: #fbe9e7; }
+.tabela-registros tr.baixa { background-color: #a1d7fd; } 
+.tabela-registros tr.normal { background-color: hsl(125, 100%, 80%); }
+.tabela-registros tr.alta { background-color: #ffbcb5; }
 
 .classificacao-col {
     font-weight: 600;
@@ -155,4 +155,24 @@ h2 {
     border: 1px solid #ffeeba;
     border-radius: 4px;
     margin-top: 15px;
+}
+
+.linha-superior {
+    display: flex;
+    gap: 30px;
+}
+
+.secao-registro,
+.secao-resumo {
+    flex: 1;
+}
+
+.secao-historico {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .linha-superior {
+        flex-direction: column;
+    }
 }
