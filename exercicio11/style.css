@@ -1,43 +1,67 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    background: #f6f8fc;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    padding: 40px;
 }
 
 .container {
-    background: #fff;
-    padding: 40px;
-    width: 350px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    background: #ffffff;
+    width: 420px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
     text-align: center;
+    color: #6b7cb8;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 input[type="number"] {
-    width: 100%;
     padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #cbd5f0;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    margin-bottom: 20px;
 }
 
 button {
-    width: 106%;
-    padding: 12px;
-    font-size: 16px;
-    background-color: #444;
-    color: #fff;
+    background: #b8c4f0;
     border: none;
-    border-radius: 6px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #333;
+    background: #a6b4ea;
+}
+
+.lista {
+    margin-top: 25px;
+}
+
+.lista h2 {
+    color: #8a94c8;
+    font-size: 18px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #eef1fb;
+    margin-bottom: 8px;
+    padding: 8px;
+    border-radius: 6px;
 }
