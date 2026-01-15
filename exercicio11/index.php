@@ -15,7 +15,7 @@ include "src/processa.php";
     <h1>Dez Primeiros Múltiplos</h1>
 
     <form action="index.php" method="POST">
-        <label>Digite qualquer número e ele será multiplicado por ele mesmo 10 vezes</label>
+        <label>Digite qualquer número e ele será multiplicado do 1 ao 10</label>
         <input type="number" name="numero" placeholder="Digite um número" required>
         <button type="submit">Calcular</button>
     </form>
