@@ -15,6 +15,5 @@
             $conexao->query($sql);
         }
 
-
     }
 

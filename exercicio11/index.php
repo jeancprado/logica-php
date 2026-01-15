@@ -12,10 +12,8 @@ include "src/processa.php";
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <div class="container">
     <h1>Dez Primeiros Múltiplos</h1>
-
     <form action="index.php" method="POST">
         <input type="number" name="numero" placeholder="Digite um número" required>
         <button type="submit">Calcular</button>
@@ -36,6 +34,5 @@ include "src/processa.php";
         </ul>
     </div>
 </div>
-
 </body>
 </html>
