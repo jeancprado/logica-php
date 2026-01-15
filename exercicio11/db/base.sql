@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Tempo de geração: 28/12/2025 às 22:56
+-- Tempo de geração: 15/01/2026 às 18:06
 -- Versão do servidor: 8.0.43
 -- Versão do PHP: 8.2.27
 
@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `exercicio11` (
   `id` int NOT NULL COMMENT 'id numero base',
-  `base-number` varchar(125) NOT NULL COMMENT 'numero base',
-  `multiple` varchar(125) NOT NULL COMMENT 'cada multiplo',
-  `date-time` datetime NOT NULL COMMENT 'data-hora do calculo'
+  `base_number` int NOT NULL COMMENT 'numero base',
+  `multiple` int NOT NULL COMMENT 'cada multiplo',
+  `date_time` datetime NOT NULL COMMENT 'data-hora do calculo'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 COMMIT;
 
