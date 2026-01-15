@@ -64,3 +64,9 @@ li {
     padding: 8px;
     border-radius: 6px;
 }
+
+label {
+    text-align: center;
+    color: #6b7cb8;
+    font-size: small;
+}
