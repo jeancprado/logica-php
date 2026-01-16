@@ -92,17 +92,15 @@ include "src/temperaturas.php";
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($registros as $registro): 
-                        $analise = classify_temperature($registro['temperature_recorded']);
-                    ?>
-                        <tr class="<?= $analise['css_class'] ?>">
-                            <td><?= $registro['measurement_date'] ?></td>
-                            <td><?= number_format($registro['temperature_recorded'], 1) ?>°C</td>
-                            <td class="classificacao-col">
-                                <?= $analise['classificacao'] ?>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
+                <?php foreach ($registros as $registro): ?>
+                    <tr class="<?= $registro['classe_css'] ?>">
+                        <td><?= $registro['measurement_date'] ?></td>
+                        <td><?= number_format($registro['temperature_recorded'], 1) ?>°C</td>
+                        <td class="classificacao-col">
+                            <?= $registro['classification'] ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
                 </tbody>
             </table>
         <?php endif; ?>

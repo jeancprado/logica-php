@@ -1,26 +1,48 @@
 <?php
 include_once "conexao.php";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $data = $_POST["measurement_date"];
-    $temp = $_POST["temperature_recorded"];
+$total_registros = 0;
 
-    if (!empty($data) && $temp !== "") {
+$estatisticas = [
+    'media' => 0,
+    'baixa_count' => 0,
+    'normal_count' => 0,
+    'alta_count' => 0
+];
+
+$registros = [];
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $data = $_POST["measurement_date"] ?? '';
+    $temp = $_POST["temperature_recorded"] ?? '';
+
+    if ($data !== '' && $temp !== '') {
+        $temp = (float) $temp;
+
+        $resultadoClassificacao = classify_temperature($temp);
+        $classificacao = $resultadoClassificacao['classificacao'];
+
         $data_sql = mysqli_real_escape_string($conexao, $data);
         $temp_sql = mysqli_real_escape_string($conexao, $temp);
+        $classificacao_sql = mysqli_real_escape_string($conexao, $classificacao);
 
-        $sql_insert = "INSERT INTO exercicio10 (measurement_date, temperature_recorded) VALUES ('$data_sql', '$temp_sql')";
+        $sql_insert = "
+            INSERT INTO exercicio10
+                (measurement_date, temperature_recorded, classification)
+            VALUES
+                ('$data_sql', '$temp_sql', '$classificacao_sql')
+        ";
 
-        if (mysqli_query($conexao, $sql_insert)) {
-            header("Location: " . $_SERVER['PHP_SELF']);
-            exit;
-        } else {
-            echo "<p style='color:red'>Erro ao inserir: " . mysqli_error($conexao) . "</p>";
+        if (!mysqli_query($conexao, $sql_insert)) {
+            die("Erro no INSERT: " . mysqli_error($conexao));
         }
+
+        header("Location: /exercicio10/index.php");
+        exit;
     }
 }
 
-$sql = "SELECT * FROM exercicio10 ORDER BY measurement_date DESC";
+$sql = "SELECT * FROM exercicio10 ORDER BY measurement_date DESC, id DESC";
 $resultado = mysqli_query($conexao, $sql);
 
 $soma_temperaturas = 0;
@@ -32,20 +54,18 @@ $total_dias = 0;
 $dados_tabela = [];
 
 while ($linha = mysqli_fetch_assoc($resultado)) {
-    $temp = (float)$linha['temperature_recorded'];
+    $temp = (float) $linha['temperature_recorded'];
     $data_db = $linha['measurement_date'];
+    $classificacao = $linha['classification'];
 
-    if ($temp < 15) {
-        $classificacao = "Baixa";
-        $classe_css = "baixa"; 
+    if ($classificacao === 'Baixa') {
+        $classe_css = 'baixa';
         $qtd_baixa++;
-    } elseif ($temp > 25) {
-        $classificacao = "Alta";
-        $classe_css = "alta";
+    } elseif ($classificacao === 'Alta') {
+        $classe_css = 'alta';
         $qtd_alta++;
     } else {
-        $classificacao = "Normal";
-        $classe_css = "normal";
+        $classe_css = 'normal';
         $qtd_normal++;
     }
 
@@ -60,9 +80,9 @@ while ($linha = mysqli_fetch_assoc($resultado)) {
     ];
 }
 
-$media_geral = ($total_dias > 0) ? ($soma_temperaturas / $total_dias) : 0;
-
-$total_registros = $total_dias;
+$media_geral = ($total_dias > 0)
+    ? ($soma_temperaturas / $total_dias)
+    : 0;
 
 $estatisticas = [
     'media' => $media_geral,
@@ -72,24 +92,17 @@ $estatisticas = [
 ];
 
 $registros = $dados_tabela;
+$total_registros = $total_dias;
 
-function classify_temperature(float $temp): array {
+function classify_temperature(float $temp): array
+{
     if ($temp < 15) {
-        return [
-            'classificacao' => 'Baixa',
-            'css_class' => 'baixa'
-        ];
-    } elseif ($temp > 25) {
-        return [
-            'classificacao' => 'Alta',
-            'css_class' => 'alta'
-        ];
-    } else {
-        return [
-            'classificacao' => 'Normal',
-            'css_class' => 'normal'
-        ];
+        return ['classificacao' => 'Baixa'];
     }
-}
 
-?>
+    if ($temp > 25) {
+        return ['classificacao' => 'Alta'];
+    }
+
+    return ['classificacao' => 'Normal'];
+}
