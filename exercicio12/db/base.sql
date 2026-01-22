@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Tempo de geração: 15/01/2026 às 20:19
+-- Tempo de geração: 22/01/2026 às 04:25
 -- Versão do servidor: 8.0.43
 -- Versão do PHP: 8.2.27
 
@@ -28,11 +28,31 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `exercicio12` (
-  `id` int DEFAULT NULL COMMENT 'id_escada',
-  `goal` int DEFAULT NULL COMMENT 'metas',
-  `date_time` datetime DEFAULT NULL COMMENT 'data e hora registro',
-  `newest_to_oldest` int DEFAULT NULL COMMENT 'mais recente pro mais antigo'
+  `id` int NOT NULL COMMENT 'id_escada',
+  `goal` varchar(255) NOT NULL COMMENT 'metas',
+  `date_time` datetime NOT NULL COMMENT 'data e hora registro',
+  `newest_to_oldest` int NOT NULL COMMENT 'mais recente pro mais antigo'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices de tabela `exercicio12`
+--
+ALTER TABLE `exercicio12`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT para tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `exercicio12`
+--
+ALTER TABLE `exercicio12`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT COMMENT 'id_escada';
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
