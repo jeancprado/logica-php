@@ -1,19 +1,17 @@
 <?php
 include_once __DIR__ . "/conexao.php";
 
+date_default_timezone_set('America/Sao_Paulo');
+
 $goal = '';
 $escada = [];
 
-/* =========================
-   PROCESSA O FORMULÁRIO
-========================= */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $goal = trim($_POST['goal'] ?? '');
 
     if ($goal !== '') {
 
-        // Gera a escada com WHILE
         $i = 1;
         $tamanho = strlen($goal);
 
@@ -31,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $i++;
         }
 
-        // Salva no banco
         $goal_sql = mysqli_real_escape_string($conexao, $goal);
         $date_time = date('Y-m-d H:i:s');
 
@@ -46,9 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-/* =========================
-   BUSCA HISTÓRICO
-========================= */
 $sqlSelect = "
     SELECT goal, date_time
     FROM exercicio12
@@ -62,4 +56,5 @@ $historico = [];
 while ($row = mysqli_fetch_assoc($resultado)) {
     $historico[] = $row;
 }
+
 ?>
