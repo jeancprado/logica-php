@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Tempo de geração: 15/01/2026 às 18:06
+-- Tempo de geração: 05/02/2026 às 13:07
 -- Versão do servidor: 8.0.43
 -- Versão do PHP: 8.2.27
 
@@ -33,6 +33,26 @@ CREATE TABLE `exercicio11` (
   `multiple` int NOT NULL COMMENT 'cada multiplo',
   `date_time` datetime NOT NULL COMMENT 'data-hora do calculo'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices de tabela `exercicio11`
+--
+ALTER TABLE `exercicio11`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT para tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `exercicio11`
+--
+ALTER TABLE `exercicio11`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT COMMENT 'id numero base';
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
