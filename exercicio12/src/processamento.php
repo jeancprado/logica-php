@@ -8,12 +8,12 @@ $escada = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $goal = trim($_POST['goal'] ?? '');
+    $goal = mb_strtoupper(trim($_POST['goal'] ?? ''), 'UTF-8');
 
     if ($goal !== '') {
 
         $i = 1;
-        $tamanho = strlen($goal);
+        $tamanho = 5;
 
         while ($i <= $tamanho) {
 
