@@ -26,10 +26,10 @@ describe('Exercício 12 - Escada da motivação', () => {
     it('Testar se a escada funciona conforme o esperado', () => {
     cy.get('input[name="goal"]').type('Agir')
     cy.get('button[type="submit"]').click()
-    cy.contains('Agir').should('be.visible')
-    cy.contains('Agir Agir').should('be.visible')
-    cy.contains('Agir Agir Agir').should('be.visible')
-    cy.contains('Agir Agir Agir Agir').should('be.visible')
+    cy.contains('AGIR').should('be.visible')
+    cy.contains('AGIR AGIR').should('be.visible')
+    cy.contains('AGIR AGIR AGIR').should('be.visible')
+    cy.contains('AGIR AGIR AGIR AGIR').should('be.visible')
   });
   
 })
