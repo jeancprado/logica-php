@@ -1,0 +1,70 @@
+body {
+    text-align: center;
+    background: #f4f6f9;
+    padding: 20px;
+    font-family: Muli, sans-serif;
+    font-size: 16px;
+}
+
+form input {
+    padding: 10px;
+    width: 250px;
+}
+
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.info {
+    margin-top: 10px;
+}
+
+.erro {
+    color: red;
+}
+
+.resumo {
+    background: #ffffff;
+    padding: 15px;
+    margin: 20px auto;
+    width: 300px;
+    border-radius: 8px;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.temp-fria {
+    background-color: #cce5ff;
+}
+
+.temp-agradavel {
+    background-color: #fff3cd;
+}
+
+.temp-quente {
+    background-color: #f8d7da;
+}
+
+.botao {
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.h3 {
+    font-family: "Space Mono", monospace;
+    font-size: 46px; 
+}
+
