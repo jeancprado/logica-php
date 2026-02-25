@@ -12,7 +12,7 @@ services:
       - APACHE_DOCUMENT_ROOT=/var/www/html
 
   db:
-    image: mysql:9.5
+    image: mysql:8.0
     container_name: mysql_dados
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
